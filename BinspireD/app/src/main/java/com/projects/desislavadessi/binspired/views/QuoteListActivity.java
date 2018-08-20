@@ -43,7 +43,6 @@ public class QuoteListActivity extends Activity implements Navigatable {
     }
 
     @Override
-    // public void navigateWith(Quote quote)
     public void navigateWith(String quote)  {
         if (mIsPhone) {
             Intent intent = new Intent(

@@ -69,6 +69,7 @@ public class QuoteListFragment extends Fragment implements AdapterView.OnItemCli
                 });
 
 
+        /*
         Quote marilynMonroe =  new Quote("Marilyn Monroe", "We should all start to live before we get too old." );
         mDB.collection("quotes")
                 .add(marilynMonroe);
@@ -76,6 +77,8 @@ public class QuoteListFragment extends Fragment implements AdapterView.OnItemCli
         Quote buddha = new Quote("Buddha","May all beings have happy minds.");
         mDB.collection("quotes")
                 .add(buddha);
+
+                */
 
 
 
