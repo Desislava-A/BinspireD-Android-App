@@ -52,6 +52,7 @@ public class QuoteListFragment extends Fragment implements AdapterView.OnItemCli
         mQuotesListView.setAdapter(mQuotesAdapter);
         mQuotesListView.setOnItemClickListener(this);
 
+        /*
         mDB.collection("quotes")
                 .get()
                 .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
@@ -59,14 +60,24 @@ public class QuoteListFragment extends Fragment implements AdapterView.OnItemCli
                     public void onComplete(@NonNull Task<QuerySnapshot> task) {
                         List<Quote> quoutesList =task.getResult().
                                 toObjects(Quote.class);
-
                         for (Quote quote:quoutesList
                              ) {
                             mQuotesAdapter.add(quote.author);
-
                         }
                     }
                 });
+                */
+
+
+        mDB.collection("quotes")
+        .get()
+        .addOnCompleteListener(task -> {
+            List<Quote> quoutesList =task.getResult().
+            toObjects(Quote.class);
+            for (Quote quoteItem : quoutesList) {
+            mQuotesAdapter.add(quoteItem.author);
+                  }
+          });
 
 
         /*
@@ -79,8 +90,6 @@ public class QuoteListFragment extends Fragment implements AdapterView.OnItemCli
                 .add(buddha);
 
                 */
-
-
 
         /*
 
