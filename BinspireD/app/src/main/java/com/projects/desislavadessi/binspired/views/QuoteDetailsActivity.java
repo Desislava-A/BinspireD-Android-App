@@ -16,9 +16,11 @@ public class QuoteDetailsActivity extends Activity {
         setContentView(R.layout.activity_quote_details);
 
         Intent intent = getIntent();
-        String qoute = intent.getStringExtra("QUOTE_AUTHOR");
+        //String name = intent.getStringExtra("QUOTE_AUTHOR");
+        String qoute = intent.getStringExtra("QUOTE_CONTENT");
 
         mQuoteDetailsFragment = QuoteDetailsFragment.newInstance();
+        //mQuoteDetailsFragment.setmQuote(name);
         mQuoteDetailsFragment.setmQuote(qoute);
 
         getFragmentManager()

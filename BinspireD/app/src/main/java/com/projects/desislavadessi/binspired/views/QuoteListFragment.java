@@ -27,7 +27,7 @@ public class QuoteListFragment extends Fragment implements AdapterView.OnItemCli
     private Navigatable mNavigator;
 
     private ListView mQuotesListView;
-    private ArrayAdapter<String> mQuotesAdapter;
+    private ArrayAdapter<Quote> mQuotesAdapter;
 
 
     private FirebaseFirestore mDB;
@@ -75,7 +75,7 @@ public class QuoteListFragment extends Fragment implements AdapterView.OnItemCli
             List<Quote> quoutesList =task.getResult().
             toObjects(Quote.class);
             for (Quote quoteItem : quoutesList) {
-            mQuotesAdapter.add(quoteItem.author);
+            mQuotesAdapter.add(quoteItem);
                   }
           });
 
@@ -106,7 +106,7 @@ public class QuoteListFragment extends Fragment implements AdapterView.OnItemCli
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
-        String quote = mQuotesAdapter.getItem(position);
+        String quote = mQuotesAdapter.getItem(position).quoteText;
         mNavigator.navigateWith(quote);
     }
 

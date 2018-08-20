@@ -4,7 +4,7 @@ import com.projects.desislavadessi.binspired.models.Quote;
 
 public interface Navigatable {
 
-    void navigateWith(String quote);
+    void navigateWith( String quoteContent);
 
 
 

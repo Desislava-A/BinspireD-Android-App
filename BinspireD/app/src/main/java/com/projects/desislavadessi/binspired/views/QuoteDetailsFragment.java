@@ -42,4 +42,13 @@ public class QuoteDetailsFragment extends Fragment {
 
         mQuoteTextView.setText(quote);
     }
+
+    public void setmName(String name) {
+        mQuote = name;
+        if (mQuoteTextView == null) {
+            return;
+        }
+
+        mQuoteTextView.setText(name);
+    }
 }

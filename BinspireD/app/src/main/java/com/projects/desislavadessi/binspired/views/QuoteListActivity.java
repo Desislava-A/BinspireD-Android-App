@@ -43,18 +43,19 @@ public class QuoteListActivity extends Activity implements Navigatable {
     }
 
     @Override
-    public void navigateWith(String quote)  {
+    public void navigateWith( String quoteContent)  {
         if (mIsPhone) {
             Intent intent = new Intent(
                     this,
                     QuoteDetailsActivity.class
             );
 
-            intent.putExtra("QUOTE_AUTHOR", quote);
+            //intent.putExtra("QUOTE_AUTHOR", authorName);
+            intent.putExtra("QUOTE_CONTENT", quoteContent);
 
             startActivity(intent);
-        } else {
-            mQuotesDetailsFragment.setmQuote(quote);
-        }
+        } //lse {
+            //mQuotesDetailsFragment.setmQuote(quote);
+        //}
     }
 }
