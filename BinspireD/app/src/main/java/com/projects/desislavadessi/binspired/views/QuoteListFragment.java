@@ -28,6 +28,8 @@ public class QuoteListFragment extends Fragment implements AdapterView.OnItemCli
 
     private ListView mQuotesListView;
     private ArrayAdapter<String> mQuotesAdapter;
+
+
     private FirebaseFirestore mDB;
 
 
@@ -80,7 +82,6 @@ public class QuoteListFragment extends Fragment implements AdapterView.OnItemCli
         /*
 
         mQuotesAdapter.add("Antoine de Saint-Exupéry");
-        mQuotesAdapter.add("Budha");
         mQuotesAdapter.add("Eckhart Tolle");
         mQuotesAdapter.add("Marilyn Monroe");
 
@@ -92,6 +93,7 @@ public class QuoteListFragment extends Fragment implements AdapterView.OnItemCli
 
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
         String quote = mQuotesAdapter.getItem(position);
         mNavigator.navigateWith(quote);
     }

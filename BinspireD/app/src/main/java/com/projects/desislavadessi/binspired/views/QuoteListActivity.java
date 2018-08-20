@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 
 import com.projects.desislavadessi.binspired.R;
+import com.projects.desislavadessi.binspired.models.Quote;
 import com.projects.desislavadessi.binspired.uxstructure.Navigatable;
 
 
@@ -42,7 +43,8 @@ public class QuoteListActivity extends Activity implements Navigatable {
     }
 
     @Override
-    public void navigateWith(String quote) {
+    // public void navigateWith(Quote quote)
+    public void navigateWith(String quote)  {
         if (mIsPhone) {
             Intent intent = new Intent(
                     this,
